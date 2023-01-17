@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+main {
+  position: relative;
+  margin: 0 auto;
+  padding: 15px 0 0 0;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-size: 3em;
+}
+
+.new-member-form {
+  margin: 2em 0 4em 0;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 2em;
+  font-family: 'Caveat', cursive;
+}
+
+input {
+  margin-bottom: 1em;
+  padding: 7px;
+  width: 400px;
+  height: 50px;
+  font-size: 1.5em;
+  font-family: 'Caveat', cursive;
+}
+
+.button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  transform: translate(-50%, -30%);
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  transition: 0.2s;
+}
+
+.button:hover {
+  width: 170px;
+}
+
+.button img {
+  width: 80%;
+}
+
+.container {
+  position: absolute;
+  width: 800px;
+  left: 30%;
+  top: 25%;
+}
+
+.container-member {
+  column-width: 250px;
+}
+
+.member-item p {
+  padding: 0.2em 0;
+  font-family: 'Caveat', cursive;
+  font-size: 2em;
+  text-align: center;
+}
+
+.papyrus img {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.image_bateau {
+  background: red;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.image_bateau img {
+  position: absolute;
+  z-index: 2;
+  width: 20%;
+  top: 75%;
+}
+
+
+@media screen and (max-width: 385px) {
+
+  h2 {
+    text-align: center;
+    font-size: 1em;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.2em;
+    font-size: 1.2em;
+    font-family: 'Caveat', cursive;
+  }
+
+  input {
+    padding: 10px 5px;
+    width: 150px;
+    height: 25px;
+    font-size: 0.8em;
+    font-family: 'Caveat', cursive;
+  }
+
+
+  .button {
+    width: 100px;
+    transition: 0.2s;
+  }
+
+  .button:hover {
+    width: 120px;
+  }
+
+  .button img {
+    width: 50%;
+  }
+
+  .container {
+    position: absolute;
+    left: 25%;
+    top: 33%;
+    width: 200px;
+  }
+
+  .container-member {
+    column-width: 50px;
+  }
+
+  .member-item p {
+    padding: 0.2em 0;
+    font-size: 0.5em;
+    text-align: center;
+  }
+
+  .papyrus {
+    margin-top: -13%;
+  }
+
+  .papyrus img {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .image_bateau img {
+    width: 20%;
+    top: 82%;
+  }
+}

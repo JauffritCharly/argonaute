@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="main.css">
+<main>
+  <h2>Ajouter un(e) Argonaute</h2>
+
+  <!--formulaire pour ajouter un membre de l'équipage : -->
+
+  <div class="form_container">
+    <form class="new-member-form"
+          name="form"
+          [formGroup]="formulaire"
+          (ngSubmit)="onSubmit()"
+    >
+      <div class="group">
+        <label for="nom">Nom de l'Argonaute : </label>
+        <input type="text" name="nom" id="nom" formControlName="nom" placeholder="Ex : Charalampos" required>
+      </div>
+      <div class="group">
+        <button class="button" [disabled]="!formulaire.valid">
+          <img src="assets/img/fleche.png" alt="feuille de papyrus">
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Liste des membres : -->
+
+  <section class="member-list">
+    <div class="container">
+      <h2 class="memberH2">Membres de l'équipage :</h2>
+      <div class="container-member" *ngIf="membres | async as membres">
+        <div class="member-item" *ngFor="let membre of membres.slice(0,50)">
+          <p>{{membre.nom}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="papyrus">
+      <img src="assets/img/papyrus-removebg-preview.png" alt="papyrus">
+    </div>
+  </section>
+  <div class="image_bateau">
+    <img src="assets/img/bateau2-removebg-preview.png" alt="Bateau des argonautes sur le papyrus">
+  </div>
+
+</main>

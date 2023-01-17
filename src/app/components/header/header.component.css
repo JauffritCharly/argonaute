@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  height: 15vh;
+}
+
+header img {
+  max-width: 100px;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+@media screen and (max-width: 385px) {
+
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  header img {
+    max-width: 60px;
+  }
+
+}
